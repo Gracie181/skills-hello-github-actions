@@ -79,3 +79,37 @@ section.active {
 .btn:hover{
     background:#0056b3;
 }
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+    .sidebar, nav {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    .content, .section {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    h1 { font-size: 24px; }
+    h2 { font-size: 20px; }
+    h3 { font-size: 18px; }
+    p { font-size: 14px; line-height: 1.5; }
+    
+    .skill-bar {
+        width: 100%;
+        height: 15px;
+    }
+}
