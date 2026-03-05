@@ -8,14 +8,27 @@
 </head>
 <body>
 
-<div class="sidebar">
-    <h2>Grace Waweru</h2>
-    <a href="#home" class="active">Home</a>
+<!-- Hamburger menu -->
+<div class="hamburger" onclick="toggleMenu()">
+    &#9776; <!-- three lines icon -->
+</div>
+
+<!-- Sidebar / Dashboard -->
+<div class="sidebar" id="sidebar">
+    <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
 </div>
+
+<!-- JavaScript for toggle -->
+<script>
+function toggleMenu() {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("active");
+}
+</script>
 
 <div class="content">
 
