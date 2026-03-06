@@ -1,14 +1,7 @@
-const links = document.querySelectorAll('.sidebar nav a');
-const sections = document.querySelectorAll('section');
+function toggleMenu(){
 
-links.forEach(link => {
-    link.addEventListener('click', function(e){
-        e.preventDefault();
-        links.forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
+const sidebar = document.getElementById("sidebar");
 
-        const target = this.getAttribute('href').substring(1);
-        sections.forEach(sec => sec.classList.remove('active'));
-        document.getElementById(target).classList.add('active');
-    });
-});
+sidebar.classList.toggle("active");
+
+}

@@ -1,176 +1,139 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:white;
+color:#333;
+}
+
+/* Hamburger */
+
+.hamburger{
+font-size:30px;
+padding:15px;
+cursor:pointer;
+color:#ff4da6;
+display:none;
 }
 
 /* Sidebar */
-.sidebar {
-    width: 250px;
-    background: #1e1e2f;
-    color: white;
-    height: 100vh;
-    padding-top: 20px;
-    position: fixed;
+
+.sidebar{
+width:240px;
+height:100%;
+background:#ff4da6;
+position:fixed;
+left:0;
+top:0;
+padding-top:30px;
 }
 
-.sidebar h2 {
-    text-align: center;
+.logo{
+text-align:center;
+color:white;
+margin-bottom:30px;
 }
 
-.sidebar a {
-    display: block;
-    color: white;
-    padding: 15px;
-    text-decoration: none;
+.sidebar a{
+display:block;
+color:white;
+text-decoration:none;
+padding:15px 25px;
 }
 
-.sidebar a:hover,
-.sidebar a.active {
-    background: #343454;
+.sidebar a:hover{
+background:white;
+color:#ff4da6;
 }
 
-/* Content */
-.content {
-    margin-left: 250px;
-    padding: 30px;
-    width: 100%;
+/* Main Content */
+
+.main{
+margin-left:240px;
+padding:40px;
 }
 
-section {
-    display: none;
+.section{
+margin-bottom:80px;
 }
 
-section.active {
-    display: block;
-}.buttons{
-    margin-top:20px;
-}
+/* Buttons */
 
-.btn{
-    display:inline-block;
-    padding:10px 20px;
-    margin:5px;
-    background:#007BFF;
-    color:white;
-    text-decoration:none;
-    border-radius:5px;
-    font-weight:bold;
-}
-
-.btn:hover{
-    background:#0056b3;
-}
 .buttons{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
+margin-top:20px;
 }
 
 .btn{
-    padding:12px 20px;
-    background:#007BFF;
-    color:white;
-    text-decoration:none;
-    border-radius:6px;
-    font-weight:bold;
+display:inline-block;
+padding:10px 20px;
+background:#ff4da6;
+color:white;
+text-decoration:none;
+border-radius:6px;
+margin-right:10px;
 }
 
 .btn:hover{
-    background:#0056b3;
-}
-/* Mobile styles */
-@media screen and (max-width: 768px) {
-    .sidebar, nav {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-    
-    .content, .section {
-        margin-left: 0;
-        padding: 10px;
-    }
-
-    .buttons {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .btn {
-        width: 100%;
-        text-align: center;
-        font-size: 16px;
-    }
-
-    h1 { font-size: 24px; }
-    h2 { font-size: 20px; }
-    h3 { font-size: 18px; }
-    p { font-size: 14px; line-height: 1.5; }
-    
-    .skill-bar {
-        width: 100%;
-        height: 15px;
-    }
-}/* Hamburger icon */
-.hamburger {
-    font-size: 30px;
-    cursor: pointer;
-    padding: 10px 20px;
-    display: none; /* show only on mobile */
-    background: #007BFF;
-    color: white;
+background:#e60073;
 }
 
-/* Sidebar */
-.sidebar {
-    width: 250px;
-    background: #333;
-    color: white;
-    position: fixed;
-    height: 100%;
-    top: 0;
-    left: -250px; /* hidden by default */
-    transition: 0.3s;
-    padding-top: 60px;
-    z-index: 1000;
+/* Skills */
+
+.skill{
+margin:20px 0;
 }
 
-.sidebar a {
-    display: block;
-    color: white;
-    padding: 15px 20px;
-    text-decoration: none;
+.bar{
+width:100%;
+height:10px;
+background:#eee;
+border-radius:10px;
 }
 
-.sidebar a:hover {
-    background: #575757;
+.level{
+height:10px;
+background:#ff4da6;
+border-radius:10px;
 }
 
-/* Active sidebar */
-.sidebar.active {
-    left: 0;
+.html{width:90%;}
+.css{width:85%;}
+.js{width:70%;}
+.python{width:75%;}
+
+/* Project card */
+
+.project-card{
+background:#ffe6f2;
+padding:20px;
+border-radius:10px;
+margin-top:20px;
 }
 
-/* Desktop view - sidebar always visible */
-@media screen and (min-width: 768px) {
-    .hamburger {
-        display: none;
-    }
-    .sidebar {
-        left: 0;
-    }
-    .content {
-        margin-left: 250px;
-    }
+/* MOBILE */
+
+@media (max-width:768px){
+
+.sidebar{
+left:-240px;
+transition:0.3s;
 }
 
-/* Mobile view */
-@media screen and (max-width: 767px) {
-    .hamburger {
-        display: block;
-    }
-    .content {
-        margin-left: 0;
-    }
+.sidebar.active{
+left:0;
+}
+
+.hamburger{
+display:block;
+}
+
+.main{
+margin-left:0;
+padding:20px;
+}
+
 }
